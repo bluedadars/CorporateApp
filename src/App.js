@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from '@emotion/react';
+import Home from './Components/Home';
+import theme from './Components/styles';
+
+// import App from './Components/ImageSlider/App';
+// import Myapp from './Components/ImageSlider/Myapp';
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Home/>
+    {/* <Myapp/> */}
     </div>
+    </ThemeProvider>
   );
 }
 
